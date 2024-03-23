@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('/fonts/LibreBaskerville-Regular.ttf') format('truetype');
+  font-weight: normal;
+  /* Add other font formats like woff, woff2 for better compatibility */
+}
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('/fonts/LibreBaskerville-Bold.ttf') format('truetype');
+  font-weight: bold;
+  /* Add other font formats like woff, woff2 for better compatibility */
+}
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('/fonts/LibreBaskerville-Italic.ttf') format('truetype');
+  font-style: italic;
+  /* Add other font formats like woff, woff2 for better compatibility */
+}
+
+@font-face {
+  font-family: 'Satisfy';
+  src: url('/fonts/Satisfy-Regular.ttf') format('truetype');
+  /* Add other font formats like woff, woff2 for better compatibility */
+}
+
+@font-face {
+  font-family: 'Quicksand Bold Oblique';
+  src: url('/fonts/Quicksand_Bold_Oblique.otf') format('opentype');
+  font-style: oblique;
+  font-weight: bold;
+  /* Add other font formats like woff, woff2 for better compatibility */
+}
+
+@font-face {
+  font-family: 'Quicksand Bold';
+  src: url('/fonts/Quicksand_Bold.otf') format('opentype');
+  font-weight: bold;
+  /* Add other font formats like woff, woff2 for better compatibility */
+}
+
+@font-face {
+  font-family: 'Quicksand Book Oblique';
+  src: url('/fonts/Quicksand_Book_Oblique.otf') format('opentype');
+  font-style: oblique;
+  /* Add other font formats like woff, woff2 for better compatibility */
+}
+
+@font-face {
+  font-family: 'Quicksand Book';
+  src: url('/fonts/Quicksand_Book.otf') format('opentype');
+  /* Add other font formats like woff, woff2 for better compatibility */
+}
+
+@font-face {
+  font-family: 'Quicksand Dash';
+  src: url('/fonts/Quicksand_Dash.otf') format('opentype');
+  /* Add other font formats like woff, woff2 for better compatibility */
+}
+
+@font-face {
+  font-family: 'Quicksand Light Oblique';
+  src: url('/fonts/Quicksand_Light_Oblique.otf') format('opentype');
+  font-style: oblique;
+  /* Add other font formats like woff, woff2 for better compatibility */
+}
+
+@font-face {
+  font-family: 'Quicksand Light';
+  src: url('/fonts/Quicksand_Light.otf') format('opentype');
+  /* Add other font formats like woff, woff2 for better compatibility */
+}
