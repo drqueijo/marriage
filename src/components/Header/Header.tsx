@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
 import usePaths from "@/hooks/usePaths";
-import Link from "next/link";
 import { Container } from "../Container/Container";
 
-interface HeaderProps {}
-
-export const Header: React.FC<HeaderProps> = ({}) => {
-  const { paths, scrollTo } = usePaths({});
+export const Header: React.FC = () => {
+  const { paths, scrollTo } = usePaths();
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {

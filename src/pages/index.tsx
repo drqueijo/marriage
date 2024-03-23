@@ -27,7 +27,7 @@ export default function Home() {
               JUJUBA coloca alguma coisa bonita aqui
             </p>
             <p className="font-libre text-center text-sm font-light uppercase text-gray-700">
-              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
               quae ab illo inventore veritatis et quasi architecto beatae vitae
               dicta sunt explicabo.

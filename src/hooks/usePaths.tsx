@@ -1,6 +1,4 @@
-interface usePathsProps {}
-
-export const usePaths = ({}: usePathsProps) => {
+export const usePaths = () => {
   const paths = {
     hero: {
       section: "#hero",

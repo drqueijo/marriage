@@ -1,6 +1,4 @@
-interface HeroProps {}
-
-export const Hero: React.FC<HeroProps> = ({}) => {
+export const Hero: React.FC = () => {
   const positioning = (x: number, y: number): React.CSSProperties => {
     return {
       position: "absolute",

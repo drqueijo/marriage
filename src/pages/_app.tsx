@@ -6,7 +6,6 @@ import { Inter } from "next/font/google";
 import { api } from "@/utils/api";
 
 import "@/styles/globals.css";
-import { Head } from "next/document";
 import Header from "@/components/Header/Header";
 
 const inter = Inter({
