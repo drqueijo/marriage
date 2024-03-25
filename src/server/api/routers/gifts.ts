@@ -1,5 +1,5 @@
 import { createTRPCRouter, publicProcedure } from "@/server/api/trpc";
-import { createGiftInput, Gift, updateGiftInput } from "@/types/gift";
+import { createGiftInput, updateGiftInput } from "@/types/gift";
 
 export const giftRouter = createTRPCRouter({
   get: publicProcedure.query(async ({ ctx }) => {
