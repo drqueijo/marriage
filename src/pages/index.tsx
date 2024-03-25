@@ -1,4 +1,6 @@
 import Container from "@/components/Container/Container";
+import { GiftForm } from "@/components/Form/Form";
+import Gifts from "@/components/Gifts/Gifts";
 import Hero from "@/components/Hero/Hero";
 import Maps from "@/components/Maps/Maps";
 import Section from "@/components/Section/Section";
@@ -49,6 +51,14 @@ export default function Home() {
             </h1>
             <Maps />
           </div>
+        </Container>
+      </Section>
+      <Section sectionId="presentes">
+        <Container>
+          <Gifts />
+        </Container>
+        <Container>
+          <GiftForm />
         </Container>
       </Section>
     </div>

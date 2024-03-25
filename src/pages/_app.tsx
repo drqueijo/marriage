@@ -7,6 +7,7 @@ import { api } from "@/utils/api";
 
 import "@/styles/globals.css";
 import Header from "@/components/Header/Header";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
         <Header />
         <Component {...pageProps} />
       </main>
+      <Toaster />
     </SessionProvider>
   );
 };
