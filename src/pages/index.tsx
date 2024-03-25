@@ -5,7 +5,7 @@ import Section from "@/components/Section/Section";
 
 export default function Home() {
   return (
-    <div className="h-[300vh] font-libre font-bold">
+    <div className="font-libre font-bold">
       <Section sectionId="hero">
         <div
           style={{ backgroundPositionX: "48vw" }}
