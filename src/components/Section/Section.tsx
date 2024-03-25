@@ -7,7 +7,7 @@ export const Section: React.FC<SectionProps> = ({ children, sectionId }) => {
   return (
     <section
       id={sectionId}
-      className="bg-texture flex min-h-8 w-full flex-col items-center justify-center bg-orange-50 bg-opacity-30"
+      className="flex min-h-8 w-full flex-col items-center justify-center bg-orange-50 bg-opacity-30 bg-texture"
     >
       {children}
     </section>
