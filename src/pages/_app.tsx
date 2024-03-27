@@ -22,7 +22,6 @@ const MyApp: AppType<{ session: Session | null }> = ({
     <SessionProvider session={session}>
       <title>Juliana & Gabriel</title>
       <main className={`font-sans ${inter.variable}`}>
-        <Header />
         <Component {...pageProps} />
       </main>
       <Toaster />

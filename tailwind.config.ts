@@ -24,8 +24,6 @@ const config = {
         separator: "url('/img/svg/bar-gold.svg')",
       },
       fontFamily: {
-        satisfy: ["Satisfy", "sans-serif"],
-        libre: ["Libre Baskerville", "sans-serif"],
         sans: ["var(--font-sans)", "sans-serif"],
         "quicksand-bold-oblique": ["Quicksand Bold Oblique", "sans-serif"],
         "quicksand-bold": ["Quicksand Bold", "sans-serif"],
@@ -34,6 +32,8 @@ const config = {
         "quicksand-dash": ["Quicksand Dash", "sans-serif"],
         "quicksand-light-oblique": ["Quicksand Light Oblique", "sans-serif"],
         "quicksand-light": ["Quicksand Light", "sans-serif"],
+        satisfy: ["Satisfy", "sans-serif"],
+        libre: ["Libre Baskerville", "sans-serif"],
       },
       letterSpacing: {
         full: "8px", // 10px converted to rem

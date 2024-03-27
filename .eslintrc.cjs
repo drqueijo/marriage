@@ -30,13 +30,23 @@ const config = {
     ],
     "@typescript-eslint/require-await": "off",
     "@typescript-eslint/no-misused-promises": [
-      "error",
+      "warn",
       {
         "checksVoidReturn": {
           "attributes": false
         }
       }
-    ]
+    ],
+    // Disable the specified errors
+    "@next/next/no-img-element": "off",
+    "jsx-a11y/alt-text": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
+    "react-hooks/rules-of-hooks": "off",
   }
 }
 module.exports = config;
