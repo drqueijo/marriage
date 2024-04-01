@@ -11,7 +11,7 @@ import { api } from "@/utils/api";
 
 import GiftItem from "../GiftItem/GiftItem";
 
-export const Gifts: React.FC = () => {
+export const Gifts: React.FC = ({ buy }: { buy?: boolean }) => {
   const gifts = api.gift.get.useQuery();
   const plugin = useRef(
     Autoplay({
@@ -26,20 +26,23 @@ export const Gifts: React.FC = () => {
 
   return (
     <Carousel
-      className="bg-blur-1/2"
+      className="relative w-full"
       plugins={[plugin.current]}
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >
-      <CarouselContent className="px-6">
+      <CarouselContent className="">
         {gifts.data?.map((gift) => (
-          <CarouselItem key={gift.id} className="m-auto pl-3 md:basis-3/4">
-            <GiftItem {...gift} />
+          <CarouselItem
+            key={gift.id}
+            className="w-full  shadow-2xl shadow-gray-50"
+          >
+            <GiftItem {...gift} buy={buy} className="" />
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="absolute !left-[unset] right-4 top-[80%] border-2 border-orange-950  bg-orange-950 text-orange-50" />
+      <CarouselNext className="absolute !left-[unset] right-4 top-[70%]  border-orange-950  bg-orange-50 text-orange-950" />
     </Carousel>
   );
 };

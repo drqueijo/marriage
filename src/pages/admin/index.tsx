@@ -1,5 +1,6 @@
 import { GiftForm } from "@/components/Form/Form";
 import GiftItem from "@/components/GiftItem/GiftItem";
+import Gifts from "@/components/Gifts/Gifts";
 import { Button } from "@/components/ui/button";
 import { api } from "@/utils/api";
 import { useRouter } from "next/router";
@@ -18,11 +19,7 @@ export const index: React.FC<{ a?: string }> = ({}) => {
           <GiftForm />
         </div>
         <div className="flex flex-wrap gap-3">
-          {gifts.data?.map((gift) => (
-            <div key={gift.id} className="w-96">
-              <GiftItem {...gift} />
-            </div>
-          ))}
+          <Gifts />
         </div>
       </div>
     </div>

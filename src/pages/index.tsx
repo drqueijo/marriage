@@ -19,6 +19,12 @@ export default function Home() {
             <Hero />
           </div>
         </Section>
+        <Section sectionId="presentes">
+          <h1 className="mb-6 mt-8 font-libre text-xl font-light tracking-full text-gray-700">
+            PRESENTES
+          </h1>
+          <Gifts />
+        </Section>
         <Section sectionId="noivos">
           <Container>
             <div className="m-auto flex max-w-screen-md flex-col items-center justify-center gap-8">
@@ -54,14 +60,6 @@ export default function Home() {
               </h1>
               <Maps />
             </div>
-          </Container>
-        </Section>
-        <Section sectionId="presentes">
-          <Container>
-            <Gifts />
-          </Container>
-          <Container>
-            <GiftForm />
           </Container>
         </Section>
       </div>
