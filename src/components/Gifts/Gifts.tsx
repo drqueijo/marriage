@@ -6,13 +6,15 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { api } from "@/utils/api";
 
 import GiftItem from "../GiftItem/GiftItem";
+import { Gift } from "@/types/gift";
 
 export const Gifts: React.FC = ({ buy }: { buy?: boolean }) => {
   const gifts = api.gift.get.useQuery();
+
   const plugin = useRef(
     Autoplay({
       delay: 3000,
@@ -26,7 +28,7 @@ export const Gifts: React.FC = ({ buy }: { buy?: boolean }) => {
 
   return (
     <Carousel
-      className="relative w-full"
+      className="mb-12 w-full"
       plugins={[plugin.current]}
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
@@ -41,8 +43,8 @@ export const Gifts: React.FC = ({ buy }: { buy?: boolean }) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="absolute !left-[unset] right-4 top-[80%] border-2 border-orange-950  bg-orange-950 text-orange-50" />
-      <CarouselNext className="absolute !left-[unset] right-4 top-[70%]  border-orange-950  bg-orange-50 text-orange-950" />
+      <CarouselPrevious className="absolute !left-40  top-[80%] border-2 border-orange-950  bg-orange-950 text-orange-50" />
+      <CarouselNext className="absolute !left-[unset] right-40 top-[80%]  border-orange-950  bg-orange-50 text-orange-950" />
     </Carousel>
   );
 };

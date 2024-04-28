@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const GiftSchema = z.object({
   id: z.number().int(),
-  name: z.string().min(1),
+  name: z.string().min(1, "Nome do presente é obrigatório"),
   createdAt: z.date().default(() => new Date()),
   updatedAt: z.date().default(() => new Date()),
   qtd: z.number().int().min(1),

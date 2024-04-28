@@ -4,6 +4,6 @@ const format = {
       style: "decimal",
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
-    }).format(value),
+    }).format(value / 100),
 };
 export default format;

@@ -5,6 +5,7 @@ import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
 import Maps from "@/components/Maps/Maps";
 import Section from "@/components/Section/Section";
+import SectionDivider from "@/components/SectionDivider/SectionDivider";
 
 export default function Home() {
   return (
@@ -19,12 +20,14 @@ export default function Home() {
             <Hero />
           </div>
         </Section>
+        <SectionDivider index={1} />
         <Section sectionId="presentes">
-          <h1 className="mb-6 mt-8 font-libre text-xl font-light tracking-full text-gray-700">
+          <h1 className="mb-8 mt-12 font-libre text-xl font-light tracking-full text-gray-700">
             PRESENTES
           </h1>
           <Gifts />
         </Section>
+        <SectionDivider index={2} />
         <Section sectionId="noivos">
           <Container>
             <div className="m-auto flex max-w-screen-md flex-col items-center justify-center gap-8">
@@ -52,6 +55,7 @@ export default function Home() {
             </div>
           </Container>
         </Section>
+        <SectionDivider index={3} />
         <Section sectionId="local">
           <Container>
             <div className="m-auto flex flex-col items-center justify-center gap-8">
