@@ -23,7 +23,6 @@ export const BuyDrawer: React.FC<BuyDrawerProps> = ({
   onClickClose,
   selectedGift,
 }: BuyDrawerProps) => {
-  console.log(selectedGift);
   return (
     <Drawer>
       <DrawerTrigger>

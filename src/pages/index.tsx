@@ -21,7 +21,7 @@ export default function Home() {
           </div>
         </Section>
         <SectionDivider index={1} />
-        <Section sectionId="presentes">
+        <Section className="px-0" sectionId="presentes">
           <h1 className="mb-8 mt-12 font-libre text-xl font-light tracking-full text-gray-700">
             PRESENTES
           </h1>
@@ -30,13 +30,16 @@ export default function Home() {
         <SectionDivider index={2} />
         <Section sectionId="noivos">
           <Container>
-            <div className="m-auto flex max-w-screen-md flex-col items-center justify-center gap-8">
-              <h1 className="font-libre text-xl font-light tracking-full text-gray-700">
+            <div className="m-auto flex flex-col items-center justify-center gap-8">
+              <h1
+                style={{ textAlign: "center" }}
+                className="m-auto w-full text-center font-libre text-xl font-light tracking-full text-gray-700"
+              >
                 OS NOIVOS
               </h1>
               <img
                 src="/img/2.png"
-                className="mb-8 h-64 w-64 overflow-hidden rounded-full"
+                className="mx-auto h-64 w-64 overflow-hidden rounded-full"
               />
               <p className="text-center font-libre text-sm font-light uppercase text-gray-700">
                 JUJUBA coloca alguma coisa bonita aqui
@@ -62,6 +65,15 @@ export default function Home() {
               <h1 className="font-libre text-xl font-light tracking-full text-gray-700">
                 LOCAL
               </h1>
+              <p className="text-center font-libre text-sm font-light uppercase text-gray-700">
+                HORÁRIO E LOCAL:
+              </p>
+              <p className="text-center font-libre text-sm font-light uppercase text-gray-700">
+                A cerimônia religiosa acontecerá as 17 horas na Igreja Matriz
+                Nossa Senhora de Fátima, situada na Avenida Garibaldi Pinheiro.
+                Após a cerimônia, os noivos estarão recepcionando os convidados
+                na antiga Associação do Banestado (Chácara do Bareta).
+              </p>
               <Maps />
             </div>
           </Container>
