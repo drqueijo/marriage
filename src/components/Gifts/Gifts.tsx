@@ -6,11 +6,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { api } from "@/utils/api";
 
 import GiftItem from "../GiftItem/GiftItem";
-import { Gift } from "@/types/gift";
 
 export const Gifts: React.FC = ({ buy }: { buy?: boolean }) => {
   const gifts = api.gift.get.useQuery();

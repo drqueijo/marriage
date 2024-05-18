@@ -3,7 +3,11 @@ import { createGiftInput, updateGiftInput } from "@/types/gift";
 
 export const giftRouter = createTRPCRouter({
   get: publicProcedure.query(async ({ ctx }) => {
-    return await ctx.db.gift.findMany();
+    return await ctx.db.gift.findMany({
+      where: {
+        qtd: { gt: 0 },
+      },
+    });
   }),
   create: publicProcedure
     .input(createGiftInput)

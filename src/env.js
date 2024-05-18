@@ -31,7 +31,9 @@ export const env = createEnv({
     POSTGRES_HOST: z.string(),
     POSTGRES_PASSWORD: z.string(),
     POSTGRES_DATABASE: z.string(),
-    GOOGLE_MAPS_KEY: z.string().optional()
+    GOOGLE_MAPS_KEY: z.string().optional(),
+    PAYPAL_CLIENT_ID: z.string(),
+    PAYPAL_CLIENT_SECRET: z.string()
   },
 
   /**
@@ -61,7 +63,9 @@ export const env = createEnv({
     POSTGRES_HOST: process.env.POSTGRES_HOST,
     POSTGRES_PASSWORD: process.env.POSTGRES_PASSWORD,
     POSTGRES_DATABASE: process.env.POSTGRES_DATABASE,
-    GOOGLE_MAPS_KEY: process.env.GOOGLE_MAPS_KEY
+    GOOGLE_MAPS_KEY: process.env.GOOGLE_MAPS_KEY,
+    PAYPAL_CLIENT_ID: process.env.PAYPAL_CLIENT_ID,
+    PAYPAL_CLIENT_SECRET: process.env.PAYPAL_CLIENT_SECRET,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially

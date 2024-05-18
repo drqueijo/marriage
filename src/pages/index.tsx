@@ -1,9 +1,9 @@
 import Container from "@/components/Container/Container";
-import { GiftForm } from "@/components/Form/Form";
 import Gifts from "@/components/Gifts/Gifts";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
 import Maps from "@/components/Maps/Maps";
+import Payment from "@/components/Payment/Payment";
 import Section from "@/components/Section/Section";
 import SectionDivider from "@/components/SectionDivider/SectionDivider";
 

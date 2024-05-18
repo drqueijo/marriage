@@ -2,8 +2,6 @@ import { Gift } from "@/types/gift";
 import { twMerge } from "tailwind-merge";
 import format from "@/lib/format";
 import React, { useState } from "react";
-import { Button } from "../ui/button";
-import { GiftIcon } from "lucide-react";
 import BuyDrawer from "../BuyDrawer/BuyDrawer";
 
 type GiftItemProps = Gift & {
