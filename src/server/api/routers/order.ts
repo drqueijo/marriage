@@ -33,6 +33,19 @@ export interface Payee {
   merchant_id: string;
 }
 
+export interface PaypalCaptureOrderResponse {
+  id: string;
+  payer: {
+    name: {
+      given_name: string;
+      surname: string;
+    };
+    email_address: string;
+    payer_id: string;
+  };
+  status: string;
+}
+
 export const createOrderInput = z.object({
   value: z.number(),
 });
@@ -44,7 +57,7 @@ export const orderRouter = createTRPCRouter({
       try {
         const PaypalClient = paypalClient();
         const request = new paypal.orders.OrdersCreateRequest();
-        request.headers["Prefer"] = "return=representation";
+        request.headers.Prefer = "return=representation";
         request.requestBody({
           intent: "CAPTURE",
           purchase_units: [
@@ -77,7 +90,7 @@ export const orderRouter = createTRPCRouter({
         if (response.statusCode !== 201) {
           throw new Error("Failed to capture order");
         }
-        return response.result;
+        return response.result as PaypalCaptureOrderResponse;
       } catch (err) {
         throw new Error((err as { message: string }).message);
       }
