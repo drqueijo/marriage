@@ -90,7 +90,7 @@ export const Payment: React.FC<PaymentProps> = ({
         closeDrawer();
       }
       return true;
-    } catch (err: any) {}
+    } catch (err: unknown) {}
   };
 
   return (

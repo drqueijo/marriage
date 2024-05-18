@@ -44,6 +44,8 @@ export const Pix: React.FC<PixProps> = ({ goBack, gift, closeDrawer }) => {
   };
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     getQrCodePix();
   }, [gift]);
 
@@ -80,8 +82,8 @@ export const Pix: React.FC<PixProps> = ({ goBack, gift, closeDrawer }) => {
               <div className="flex items-center gap-2">
                 <Input value={pixCopy} readOnly className="w-full" />
                 <Button
-                  onClick={() => {
-                    navigator.clipboard.writeText(pixCopy);
+                  onClick={async () => {
+                    await navigator.clipboard.writeText(pixCopy);
                     toastMessage("Copiado para a área de transferência");
                   }}
                   className="ml-2"
