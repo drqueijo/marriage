@@ -11,6 +11,8 @@ import { Card, CardContent } from "../ui/card";
 import { Gift } from "@/types/gift";
 import { QrCodePix } from "qrcode-pix";
 import { api } from "@/utils/api";
+import { ToastAction } from "@/components/ui/toast";
+import { useToast } from "@/components/ui/use-toast";
 
 interface PixProps {
   goBack: () => void;
@@ -23,6 +25,7 @@ export const Pix: React.FC<PixProps> = ({ goBack, gift, closeDrawer }) => {
   const [pixCopy, setPixCopy] = useState("");
   const confirm = api.order.confirmPayment.useMutation();
   const gifts = api.gift.get.useQuery();
+  const { toast } = useToast();
 
   const isLoading = confirm.isPending || gifts.isLoading;
 
@@ -49,6 +52,14 @@ export const Pix: React.FC<PixProps> = ({ goBack, gift, closeDrawer }) => {
     await gifts.refetch();
     goBack();
     closeDrawer();
+    toastMessage("Pagamento confirmado com sucesso!");
+  };
+
+  const toastMessage = (message: string) => {
+    toast({
+      title: message,
+      action: <ToastAction altText="Goto schedule to undo">fechar</ToastAction>,
+    });
   };
 
   return (
@@ -71,6 +82,7 @@ export const Pix: React.FC<PixProps> = ({ goBack, gift, closeDrawer }) => {
                 <Button
                   onClick={() => {
                     navigator.clipboard.writeText(pixCopy);
+                    toastMessage("Copiado para a área de transferência");
                   }}
                   className="ml-2"
                 >

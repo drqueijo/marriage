@@ -91,4 +91,40 @@ export const orderRouter = createTRPCRouter({
         data: { qtd: { decrement: 1 } },
       });
     }),
+
+  saveOrder: publicProcedure
+    .input(
+      z.object({
+        giftId: z.number(),
+        paymentData: z.object({
+          name: z.string().optional(),
+          lastName: z.string().optional(),
+          email: z.string().optional(),
+          userId: z.string().optional(),
+        }),
+      }),
+    )
+    .mutation(async ({ input, ctx }) => {
+      const { userId, email, lastName, name } = input.paymentData;
+      const gift = await ctx.db.gift.findUnique({
+        where: { id: input.giftId },
+      });
+      if (!gift) return;
+
+      await ctx.db.gift.update({
+        where: { id: input.giftId },
+        data: { qtd: { decrement: 1 } },
+      });
+
+      return await ctx.db.order.create({
+        data: {
+          gift: { connect: { id: input.giftId } },
+          status: "COMPLETED",
+          price: gift.price,
+          createdAt: new Date(),
+          message: `${name} ${lastName} ${email}`,
+          userId: userId ?? "anonymous",
+        },
+      });
+    }),
 });

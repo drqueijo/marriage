@@ -31,7 +31,13 @@ export const Payment: React.FC<PaymentProps> = ({
 }) => {
   const createOrder = api.order.create.useMutation();
   const captureOrder = api.order.captureOrder.useMutation();
-  const isLoading = createOrder.isPending || captureOrder.isPending;
+  const saveOrder = api.order.saveOrder.useMutation();
+  const gifts = api.gift.get.useQuery();
+  const isLoading =
+    createOrder.isPending ||
+    captureOrder.isPending ||
+    saveOrder.isPending ||
+    gifts.isLoading;
   const { toast } = useToast();
 
   const paypalCreateOrder = async (
@@ -57,27 +63,34 @@ export const Payment: React.FC<PaymentProps> = ({
         action: <ToastAction altText="Goto schedule to undo">Undo</ToastAction>,
       });
     }
-    console.log(response);
     return response;
   };
 
   const paypalCaptureOrder = async (orderID: string) => {
     try {
       const response = await captureOrder.mutateAsync(orderID);
-      if (response.data.success)
+      if (response.status === "COMPLETED") {
         toast({
           title: "Ordem de pagamento bem-sucedida",
           action: (
-            <ToastAction altText="Goto schedule to undo">Undo</ToastAction>
+            <ToastAction altText="Goto schedule to undo">fechar</ToastAction>
           ),
         });
+        await saveOrder.mutateAsync({
+          giftId: gift.id,
+          paymentData: {
+            name: response.payer.name.given_name,
+            lastName: response.payer.name.surname,
+            email: response.payer.email_address,
+            userId: response.payer.payer_id,
+          },
+        });
+        await gifts.refetch();
+        goBack();
+        closeDrawer();
+      }
       return true;
-    } catch (err: any) {
-      toast({
-        title: "Erro ao capturar a ordem de pagamento",
-        action: <ToastAction altText="Goto schedule to undo">Undo</ToastAction>,
-      });
-    }
+    } catch (err: any) {}
   };
 
   return (
