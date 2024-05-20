@@ -32,9 +32,9 @@ export const Pix: React.FC<PixProps> = ({ goBack, gift, closeDrawer }) => {
   const getQrCodePix = async () => {
     const qrCodePix = QrCodePix({
       version: "01",
-      key: "10119121980",
-      name: "Fulano de Tal",
-      city: "SAO PAULO",
+      key: "jubatistasilva@yahoo.com",
+      name: "Juliana Batista",
+      city: "Cruzeiro do oeste",
       message: gift?.name,
       value: gift.price / 100,
     });

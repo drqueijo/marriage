@@ -20,13 +20,6 @@ export default function Home() {
             <Hero />
           </div>
         </Section>
-        <SectionDivider index={1} />
-        <Section className="px-0" sectionId="presentes">
-          <h1 className="mb-8 mt-12 font-libre text-xl font-light tracking-full text-gray-700">
-            PRESENTES
-          </h1>
-          <Gifts />
-        </Section>
         <SectionDivider index={2} />
         <Section sectionId="noivos">
           <Container>
@@ -41,23 +34,54 @@ export default function Home() {
                 src="/img/2.png"
                 className="mx-auto h-64 w-64 overflow-hidden rounded-full"
               />
-              <p className="text-center font-libre text-sm font-light uppercase text-gray-700">
-                JUJUBA coloca alguma coisa bonita aqui
+              <p className=" font-libre text-sm font-bold uppercase text-gray-700">
+                Queridos amigos e familiares, Sejam bem-vindos ao nosso sonho!
               </p>
-              <p className="text-center font-libre text-sm font-light uppercase text-gray-700">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo.
+              <p className=" font-libre text-sm font-light uppercase text-gray-700"></p>
+              <p className=" w-full font-libre text-sm font-light uppercase text-gray-700">
+                Se você acessou esse link, significa que são muito especiais
+                para nós!
               </p>
-              <p className="text-center font-libre text-sm font-light uppercase text-gray-700">
-                emo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                voluptatem sequi
+
+              <p className=" font-libre text-sm font-light uppercase text-gray-700">
+                Estamos imensamente gratos por compartilhar este momento tão
+                especial de nossas vidas com todos vocês. Sua presença é o maior
+                presente que poderíamos receber.
+              </p>
+              <p className=" font-libre text-sm font-light uppercase text-gray-700">
+                Criamos este site com o objetivo de informá-los sobre nosso
+                grande dia! Aqui vocês encontrarão a localização do local da
+                cerimônia e da festa, e nossa lista de presentes.
+              </p>
+              <p className=" font-libre text-sm font-light uppercase text-gray-700">
+                Se vocês desejarem nos presentear, por favor, consultem nossa
+                lista de presentes abaixo, e fiquem à vontade para escolher.
+                Lembrando que nossa lista contém uma dose de humor hahaha
+              </p>
+              <p className=" font-libre text-sm font-light uppercase text-gray-700">
+                Agradecemos do fundo do coração por todo amor e apoio que nos
+                têm dado e por fazerem parte deste capítulo importante de nossas
+                vidas.
+              </p>
+              <p className=" font-libre text-sm font-light uppercase text-gray-700">
+                Mal podemos esperar para celebrar nosso amor com todos vocês e,
+                juntos, criarmos memórias que durarão para sempre.
+              </p>
+              <p className=" font-libre text-sm font-bold uppercase text-gray-700"></p>
+              <p className="w-full text-right font-libre text-sm font-light uppercase text-gray-700">
+                Com amor e gratidão, Juliana & Gabriel
               </p>
             </div>
           </Container>
         </Section>
+        <SectionDivider index={1} />
+        <Section className="px-0" sectionId="presentes">
+          <h1 className="mb-8 mt-12 font-libre text-xl font-light tracking-full text-gray-700">
+            PRESENTES
+          </h1>
+          <Gifts />
+        </Section>
+
         <SectionDivider index={3} />
         <Section sectionId="local">
           <Container>
