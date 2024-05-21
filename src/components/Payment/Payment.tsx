@@ -94,7 +94,19 @@ export const Payment: React.FC<PaymentProps> = ({
   };
 
   return (
-    <>
+    <div className="h-fit max-h-screen w-full overflow-auto content-none">
+      <style jsx>{`
+        .vaul-drawer-bottom::after {
+          content: "";
+          display: block;
+          height: 100% !important;
+          width: 100%;
+          background: inherit; /* Optional: ensures the background of the pseudo-element matches the parent */
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      `}</style>
       <DrawerHeader>
         <DrawerTitle className="text-center font-quicksand-bold-oblique">
           {gift.name}
@@ -137,7 +149,7 @@ export const Payment: React.FC<PaymentProps> = ({
           {"<"} Voltar
         </Button>
       </DrawerFooter>
-    </>
+    </div>
   );
 };
 export default Payment;
