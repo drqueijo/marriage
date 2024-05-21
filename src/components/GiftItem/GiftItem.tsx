@@ -22,6 +22,7 @@ const GiftItem: React.FC<GiftItemProps> = ({
   updatedAt,
   createdById,
   className,
+  buy,
 }) => {
   const itemsAvaliableCount = qtd - (orders?.length || 0);
 
@@ -61,11 +62,13 @@ const GiftItem: React.FC<GiftItemProps> = ({
         >
           R$ {format.money(price)}
         </p>
-        <BuyDrawer
-          onClickOpen={onClickBuy}
-          onClickClose={onClickClose}
-          selectedGift={selectedGift}
-        />
+        {buy && (
+          <BuyDrawer
+            onClickOpen={onClickBuy}
+            onClickClose={onClickClose}
+            selectedGift={selectedGift}
+          />
+        )}
       </div>
 
       <div

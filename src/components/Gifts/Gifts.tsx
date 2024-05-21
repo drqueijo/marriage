@@ -11,7 +11,7 @@ import { api } from "@/utils/api";
 
 import GiftItem from "../GiftItem/GiftItem";
 
-export const Gifts: React.FC = ({ buy }: { buy?: boolean }) => {
+export const Gifts: React.FC<{ buy?: boolean }> = ({ buy }) => {
   const gifts = api.gift.get.useQuery();
 
   const plugin = useRef(

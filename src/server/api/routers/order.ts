@@ -99,9 +99,21 @@ export const orderRouter = createTRPCRouter({
   confirmPayment: publicProcedure
     .input(z.object({ giftId: z.number() }))
     .mutation(async ({ input, ctx }) => {
-      return await ctx.db.gift.update({
+      const gift = await ctx.db.gift.update({
         where: { id: input.giftId },
         data: { qtd: { decrement: 1 } },
+      });
+
+      return await ctx.db.order.create({
+        data: {
+          gift: { connect: { id: input.giftId } },
+          status: "PENDING",
+          price: gift.price,
+          createdAt: new Date(),
+          message: ``,
+          userId: "anonymous",
+          method: "PAYPAL",
+        },
       });
     }),
 
@@ -137,7 +149,21 @@ export const orderRouter = createTRPCRouter({
           createdAt: new Date(),
           message: `${name} ${lastName} ${email}`,
           userId: userId ?? "anonymous",
+          method: "PAYPAL",
         },
+      });
+    }),
+  get: publicProcedure.query(async ({ ctx }) => {
+    return await ctx.db.order.findMany({
+      include: { gift: true },
+    });
+  }),
+  updateStatus: publicProcedure
+    .input(z.object({ id: z.number(), status: z.string() }))
+    .mutation(async ({ ctx, input }) => {
+      return await ctx.db.order.update({
+        where: { id: input.id },
+        data: { status: input.status },
       });
     }),
 });
