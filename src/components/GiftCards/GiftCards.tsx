@@ -50,13 +50,15 @@ export const GiftCards: React.FC<GiftCardsProps> = ({ buy }) => {
               {gift.qtd} {gift.qtd > 1 ? "unidades" : "unidade"} - $
               {format.money(gift.price)}
             </div>
-            <div className="flex items-center justify-center pt-3">
-              <BuyDrawer
-                onClickOpen={() => setSelectedGift(gift)}
-                onClickClose={onClickClose}
-                selectedGift={selectedGift}
-              />
-            </div>
+            {buy && (
+              <div className="flex items-center justify-center pt-3">
+                <BuyDrawer
+                  onClickOpen={() => setSelectedGift(gift)}
+                  onClickClose={onClickClose}
+                  selectedGift={selectedGift}
+                />
+              </div>
+            )}
           </div>
         </div>
       ))}

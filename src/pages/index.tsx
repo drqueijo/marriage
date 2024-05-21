@@ -80,7 +80,7 @@ export default function Home() {
           <h1 className="mb-8 mt-12 font-libre text-xl font-light tracking-full text-gray-700">
             PRESENTES
           </h1>
-          <GiftCards />
+          <GiftCards buy />
         </Section>
 
         <SectionDivider index={3} />
