@@ -1,4 +1,5 @@
 import Container from "@/components/Container/Container";
+import GiftCards from "@/components/GiftCards/GiftCards";
 import Gifts from "@/components/Gifts/Gifts";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
@@ -79,7 +80,7 @@ export default function Home() {
           <h1 className="mb-8 mt-12 font-libre text-xl font-light tracking-full text-gray-700">
             PRESENTES
           </h1>
-          <Gifts buy />
+          <GiftCards />
         </Section>
 
         <SectionDivider index={3} />

@@ -112,7 +112,7 @@ export const orderRouter = createTRPCRouter({
           createdAt: new Date(),
           message: ``,
           userId: "anonymous",
-          method: "PAYPAL",
+          method: "PIX",
         },
       });
     }),
