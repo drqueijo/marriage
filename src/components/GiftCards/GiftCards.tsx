@@ -5,6 +5,7 @@ import { Gift } from "@/types/gift";
 import BuyDrawer from "../BuyDrawer/BuyDrawer";
 import { Button } from "../ui/button";
 import { MdOutlineExpandMore, MdOutlineExpandLess } from "react-icons/md";
+import { GiftForm } from "../Form/Form";
 
 interface GiftCardsProps {
   buy?: boolean;
@@ -57,6 +58,11 @@ export const GiftCards: React.FC<GiftCardsProps> = ({ buy }) => {
                   onClickClose={onClickClose}
                   selectedGift={selectedGift}
                 />
+              </div>
+            )}
+            {!buy && (
+              <div className="flex items-center justify-center pt-3">
+                <GiftForm gift={gift} />
               </div>
             )}
           </div>

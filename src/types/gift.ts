@@ -17,6 +17,7 @@ export const updateGiftInput = GiftSchema.omit({
   createdAt: true,
   updatedAt: true,
   orders: true,
+  createdById: true,
 });
 
 export const createGiftInput = GiftSchema.omit({
