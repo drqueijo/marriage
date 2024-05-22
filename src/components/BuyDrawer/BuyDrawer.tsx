@@ -38,7 +38,7 @@ export const BuyDrawer: React.FC<BuyDrawerProps> = ({
       <DrawerTrigger>
         <Button
           onClick={onClickOpen}
-          size="lg"
+          size="sm"
           className="flex gap-4 bg-[#c6a482] font-bold hover:bg-[#997d62]"
         >
           Enviar Presente <GiftIcon size={24} />

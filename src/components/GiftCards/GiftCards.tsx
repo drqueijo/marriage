@@ -31,9 +31,9 @@ export const GiftCards: React.FC<GiftCardsProps> = ({ buy }) => {
       {giftsToShow?.map((gift) => (
         <div
           key={gift.id}
-          className="w-72 rounded-2xl border  border-gray-200 bg-gray-100"
+          className="w-72 rounded-2xl border-2  border-gray-200 bg-gray-100"
         >
-          <div className="h-72 w-72 rounded-2xl bg-gray-100 p-3 ">
+          <div className="h-72  rounded-2xl bg-gray-100 p-3 ">
             <div
               className="relative h-full w-full rounded-full bg-cover bg-center"
               style={{
@@ -44,10 +44,10 @@ export const GiftCards: React.FC<GiftCardsProps> = ({ buy }) => {
           </div>
 
           <div className="flex flex-col gap-3  p-3 pt-6">
-            <div className="h-10 text-right font-libre text-sm font-light text-gray-600">
+            <div className="h-10 text-center font-libre text-sm font-bold text-gray-600">
               {gift.name}
             </div>
-            <div className=" w-full text-right font-quicksand-light-oblique text-sm font-bold text-gray-600">
+            <div className=" w-full text-center font-quicksand-light-oblique text-sm font-bold text-gray-600">
               {gift.qtd} {gift.qtd > 1 ? "unidades" : "unidade"} - $
               {format.money(gift.price)}
             </div>
