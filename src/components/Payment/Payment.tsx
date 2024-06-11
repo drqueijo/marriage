@@ -117,7 +117,7 @@ export const Payment: React.FC<PaymentProps> = ({
           <PayPalScriptProvider
             options={{
               clientId:
-                "ATvGe-DQHW9DY1ntil48yvwZktSmCwZCZip1rcNJgm3tDxAyyGLOb-51O8aHfhsKxpm24CiQIOAalzzq",
+                "AXDBHlZuBK1oSWmVWomfYD48EfgIfC7dSUXNCf9t0DR1bNdDHrc74_xIhHD98xwlJvE8T62ApN93833i",
               currency: "BRL",
               intent: "capture",
             }}
