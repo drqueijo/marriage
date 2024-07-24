@@ -50,7 +50,7 @@ export const GiftCards: React.FC<GiftCardsProps> = ({ buy }) => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-3  p-3 pt-6">
+          <div className="flex flex-col gap-3  p-3  py-6">
             <div className="h-10 text-center font-libre text-sm font-bold text-gray-600">
               {gift.name}
             </div>
