@@ -7,7 +7,7 @@ export const SectionDivider: React.FC<SectionDividerProps> = ({
 }: SectionDividerProps) => {
   return (
     <div
-      className="h-32 w-full bg-cover bg-fixed bg-center"
+      className="h-[60vh] w-full bg-cover bg-fixed bg-center"
       style={{
         backgroundImage: `url(/img/bg-${index}.jpg)`,
       }}

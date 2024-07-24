@@ -31,6 +31,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { useEffect } from "react";
 
 export function GiftForm({ gift }: { gift?: GiftUpdateSchema }) {
   const form = useForm({
@@ -38,12 +39,20 @@ export function GiftForm({ gift }: { gift?: GiftUpdateSchema }) {
     defaultValues: {
       name: gift?.name || "",
       qtd: gift?.qtd || 0,
-      price: gift?.price || 0,
+      price: (gift?.price || 0) / 100,
       image: gift?.image || "",
       description: gift?.description || "",
       createdById: "ADMIN",
     },
   });
+
+  useEffect(() => {
+    form.setValue("price", (gift?.price || 0) / 100);
+    form.setValue("qtd", gift?.qtd || 0);
+    form.setValue("name", gift?.name || "");
+    form.setValue("image", gift?.image || "");
+    form.setValue("description", gift?.description || "");
+  }, [gift]);
 
   const createGift = api.gift.create.useMutation();
   const updateGift = api.gift.update.useMutation();
@@ -63,7 +72,6 @@ export function GiftForm({ gift }: { gift?: GiftUpdateSchema }) {
               "bg-green-500 text-white font-bold font-quicksand-bold-oblique",
             title: `Presente ${e.name} atualizado com sucesso`,
           });
-          form.reset();
           await gifts.refetch();
         },
         (e) => {

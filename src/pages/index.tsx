@@ -13,10 +13,10 @@ export default function Home() {
     <>
       <Header />
       <div className="font-libre font-bold">
-        <Section sectionId="hero">
+        <Section className="h-[95vh] p-0" sectionId="hero">
           <div
-            style={{ backgroundPositionX: "48vw" }}
-            className="flex w-full items-center justify-center bg-flower bg-center bg-no-repeat"
+            style={{ backgroundPositionX: "50vw" }}
+            className="flex h-full w-full items-center justify-center bg-flower bg-no-repeat"
           >
             <Hero />
           </div>

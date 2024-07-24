@@ -31,16 +31,23 @@ export const GiftCards: React.FC<GiftCardsProps> = ({ buy }) => {
       {giftsToShow?.map((gift) => (
         <div
           key={gift.id}
-          className="w-72 rounded-2xl border-2  border-gray-200 bg-gray-100"
+          className="w-72 rounded-2xl border-2  border-[#c6a482] bg-white opacity-90"
         >
-          <div className="h-72  rounded-2xl bg-gray-100 p-3 ">
+          <div className="h-72 rounded-2xl bg-gray-100 ">
             <div
-              className="relative h-full w-full rounded-full bg-cover bg-center"
+              className="relative h-full w-full rounded-t-[14px] bg-cover bg-center"
               style={{
                 backgroundImage: `url(${gift.image})`,
                 backgroundSize: "cover",
               }}
-            ></div>
+            >
+              <div
+                className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent"
+                style={{
+                  opacity: 1, // Adjust the opacity of the gradient as needed
+                }}
+              ></div>
+            </div>
           </div>
 
           <div className="flex flex-col gap-3  p-3 pt-6">

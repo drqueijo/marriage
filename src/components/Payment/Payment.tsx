@@ -120,6 +120,7 @@ export const Payment: React.FC<PaymentProps> = ({
                 "AXDBHlZuBK1oSWmVWomfYD48EfgIfC7dSUXNCf9t0DR1bNdDHrc74_xIhHD98xwlJvE8T62ApN93833i",
               currency: "BRL",
               intent: "capture",
+              enableFunding: FUNDING.PAYLATER,
             }}
           >
             <PayPalButtons
