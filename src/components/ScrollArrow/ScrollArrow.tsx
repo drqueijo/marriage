@@ -34,8 +34,6 @@ export const ScrollArrow: React.FC = () => {
     };
   }, [ref]);
 
-  console.log(isVisible);
-
   useEffect(() => {
     if (animationItem) {
       if (isVisible) {

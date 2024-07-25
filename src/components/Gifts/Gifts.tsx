@@ -18,8 +18,6 @@ export const Gifts: React.FC<{ buy?: boolean }> = ({ buy }) => {
     Autoplay({
       delay: 3000,
       stopOnInteraction: false,
-      loop: true,
-      stopOnHover: true,
     }),
   );
 
