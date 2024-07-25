@@ -154,3 +154,15 @@
   src: url('/fonts/Quicksand_Light.otf') format('opentype');
   /* Add other font formats like woff, woff2 for better compatibility */
 }
+
+@font-face {
+  font-family: 'Alto Greeting';
+  src: url('/fonts/AltoGreeting.otf') format('opentype');
+  /* Add other font formats like woff, woff2 for better compatibility */
+}
+
+@font-face {
+  font-family: 'Rouge Script';
+  src: url('/fonts/RougeScript-Regular.ttf') format('truetype');
+  /* Add other font formats like woff, woff2 for better compatibility */
+}

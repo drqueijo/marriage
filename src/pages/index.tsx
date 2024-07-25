@@ -75,7 +75,7 @@ export default function Home() {
         </Section>
         <SectionDivider index={1} />
         <Section className="px-0" sectionId="presentes">
-          <h1 className="mb-8 mt-12 font-libre text-xl font-light tracking-full text-gray-700">
+          <h1 className="mb-8  mt-12 font-quicksand-light text-3xl font-light tracking-wide text-gray-900">
             PRESENTES
           </h1>
           <GiftCards buy />

@@ -34,6 +34,8 @@ const config = {
         "quicksand-light": ["Quicksand Light", "sans-serif"],
         satisfy: ["Satisfy", "sans-serif"],
         libre: ["Libre Baskerville", "sans-serif"],
+        "alto-greeting": ["Alto Greeting", "sans-serif"],
+        "rouge-script": ["Rouge Script", "sans-serif"],
       },
       letterSpacing: {
         full: "8px", // 10px converted to rem
