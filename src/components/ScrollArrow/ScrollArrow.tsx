@@ -3,7 +3,7 @@ import scrollAnimation from "@/animations/scrolldown.json";
 import { useEffect, useRef, useState } from "react";
 
 export const ScrollArrow: React.FC = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLButtonElement>(null);
   const [isVisible, setIsVisible] = useState(true);
 
   const options = {
@@ -44,10 +44,17 @@ export const ScrollArrow: React.FC = () => {
     }
   }, [isVisible, animationItem]);
 
+  const scrollDown = () => {
+    window.scrollTo({
+      top: ref.current?.offsetTop || 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div className="" ref={ref}>
+    <button onClick={scrollDown} className="" ref={ref}>
       {View}
-    </div>
+    </button>
   );
 };
 
