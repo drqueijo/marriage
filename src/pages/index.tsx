@@ -2,6 +2,7 @@ import Container from "@/components/Container/Container";
 import GiftCards from "@/components/GiftCards/GiftCards";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
+import Maps from "@/components/Maps/Maps";
 import ScrollArrow from "@/components/ScrollArrow/ScrollArrow";
 import Section from "@/components/Section/Section";
 import SectionDivider from "@/components/SectionDivider/SectionDivider";
@@ -97,7 +98,7 @@ export default function Home() {
                 Após a cerimônia, os noivos estarão recepcionando os convidados
                 na antiga Associação do Banestado (Chácara do Bareta).
               </p>
-              {/*               <Maps /> */}
+              <Maps />
             </div>
           </Container>
         </Section>
