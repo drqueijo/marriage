@@ -14,7 +14,7 @@ import Select from "ol/interaction/Select";
 
 const Maps: React.FC = () => {
   useEffect(() => {
-    const coordinates = [-53.086316985647294, -23.773336311809338];
+    const coordinates = [-23.775032292461756, -53.08216998960385];
     const mapCenter = fromLonLat(coordinates); // Convert to map projection
 
     const marker = new Feature({
